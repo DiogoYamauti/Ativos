@@ -1,0 +1,109 @@
+# Cria o conteúdo do .gitignore
+gitignore_content = """
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Flask stuff
+instance/
+.webassets-cache
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Environments
+.env
+.env.*
+.venv
+.venv.*
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# MongoDB
+data/
+dump/
+"""
+
+# Escreve o conteúdo para o arquivo .gitignore
+with open('.gitignore', 'w') as file:
+    file.write(gitignore_content)
+
+# Cria o conteúdo do README.md
+readme_content = """
+# Sistema de Inventário de Ativos de TI
+
+## Descrição
+
+Este projeto é um sistema de inventário de ativos de TI que permite gerenciar informações de funcionários e seus ativos. Ele utiliza Flask como framework web e MongoDB como banco de dados. As operações principais incluem a adição, listagem, consulta, atualização e exclusão de funcionários e seus respectivos ativos.
+
+## Estrutura do Projeto
+
+- `app.py`: Servidor Flask que gerencia as rotas da API.
+- `db.py`: Script de configuração do banco de dados e modelos.
+- `menu.py`: Script do menu de terminal para interagir com o sistema.
+- `requirements.txt`: Arquivo de dependências do Python.
+- `README.md`: Este documento.
+
+## Pré-requisitos
+
+- Python 3.8 ou superior
+- MongoDB
+- `pip` - Gerenciador de pacotes Python
+- Chocolatey (para instalação de dependências no Windows)
+- Visual Studio Code (VSCode)
+
+## Passo a Passo para Configurar o Ambiente
+
+### 1. Instalar Chocolatey (somente para Windows)
+
+Chocolatey é um gerenciador de pacotes para Windows que facilita a instalação de softwares.
+
+Abra o PowerShell como administrador e execute:
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
